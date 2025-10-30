@@ -35,13 +35,27 @@ class DataPreparator:
             raise FileNotFoundError(f"Features file not found at {self.features_path}")
             
         features_df = pd.read_csv(self.features_path)
+        
+        # Check if first column is non-numeric (patient ID or record name)
+        first_col = features_df.columns[0]
+        if features_df[first_col].dtype == 'object' or features_df[first_col].dtype == 'string':
+            print(f"Detected non-numeric column '{first_col}' - removing from features")
+            # Remove the first column (assumed to be ID/name column)
+            features_df = features_df.drop(columns=[first_col])
+        
+        # Ensure all remaining columns are numeric
+        non_numeric_cols = features_df.select_dtypes(exclude=[np.number]).columns.tolist()
+        if non_numeric_cols:
+            print(f"Removing non-numeric columns: {non_numeric_cols}")
+            features_df = features_df.drop(columns=non_numeric_cols)
+        
         print(f"Loaded features: {features_df.shape[0]} samples, {features_df.shape[1]} features")
         
         # Store feature names for later use
         self.feature_names = features_df.columns.tolist()
         
         return features_df
-    
+
     def generate_synthetic_labels(self, n_samples, cad_prevalence=0.3):
         """
         Generate synthetic CAD labels for binary classification.

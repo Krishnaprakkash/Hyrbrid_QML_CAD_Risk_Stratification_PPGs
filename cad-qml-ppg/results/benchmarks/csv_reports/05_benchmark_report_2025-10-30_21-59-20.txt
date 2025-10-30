@@ -1,0 +1,80 @@
+
+======================================================================
+QUANTUM vs CLASSICAL MODEL BENCHMARK REPORT
+======================================================================
+
+Generated: 2025-10-30_21-59-20
+
+EXECUTIVE SUMMARY
+----------------------------------------------------------------------
+This report compares the inference performance of a Quantum Hybrid model
+against a Classical Logistic Regression baseline for CAD detection.
+
+BENCHMARK CONFIGURATION
+----------------------------------------------------------------------
+Quantum Model:
+  • Architecture: Variational Quantum Circuit (VQC)
+  • Qubits: 4
+  • Layers: 2
+  • Parameters: 24
+  • Encoding: Amplitude
+  • Measurement: Single-qubit expectation value
+
+Classical Model:
+  • Algorithm: Logistic Regression
+  • Features: 16
+  • Coefficients: 16 + 1 intercept
+  • Balancing: ADASYN resampling
+  • Solver: SAGA
+
+INFERENCE SPEED RESULTS
+----------------------------------------------------------------------
+Batch Size | Quantum (ms) | Classical (ms) | Speedup | Faster
+------------------------------------------------------------
+         1 |       2.9999 |         0.0000 |    0.00x | Classical
+         5 |       2.3599 |         0.0000 |    0.00x | Classical
+        10 |       2.0921 |         0.0000 |    0.00x | Classical
+        20 |       1.8788 |         0.0089 |    0.01x | Classical
+        50 |       1.8738 |         0.0000 |    0.00x | Classical
+
+THROUGHPUT RESULTS
+----------------------------------------------------------------------
+Samples | Quantum (s/s) | Classical (s/s) | Speedup | Faster
+------------------------------------------------------------
+     10 |        387.05 |        29753.87 |   76.87x | Classical
+     50 |        542.02 |     50000000.00 | 92247.49x | Classical
+
+MEMORY ANALYSIS
+----------------------------------------------------------------------
+Quantum Memory:   50.19 KB
+Classical Memory: 10.13 KB
+More Efficient:   Classical
+
+RECOMMENDATIONS
+----------------------------------------------------------------------
+1. Speed Priority: Use Classical Logistic Regression
+   - Faster inference per sample
+   - Consistent performance
+   - Suitable for real-time applications
+
+2. Accuracy Priority: Use Quantum Model (if performance justified)
+   - Novel quantum feature representation
+   - Potential advantage in pattern detection
+
+3. Production Deployment:
+   - Classical for immediate deployment
+   - Quantum for research and optimization
+
+4. Hybrid Approach:
+   - Deploy both models in ensemble
+   - Cross-validation for robustness
+
+CONCLUSION
+----------------------------------------------------------------------
+Both models are suitable for clinical CAD detection with complementary
+strengths. Classical model offers reliability and speed, while quantum
+model presents research opportunities for feature representation.
+
+======================================================================
+END OF REPORT
+======================================================================

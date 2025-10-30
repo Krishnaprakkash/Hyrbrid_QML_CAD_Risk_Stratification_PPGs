@@ -1,0 +1,4 @@
+Metric,Quantum,Classical,Winner
+Single Sample Inference (ms),2.9999,0.0,Classical
+Throughput (samples/sec),387.05,29753.87,Classical
+Memory Usage (KB),50.1875,10.1328125,Classical

@@ -1,0 +1,3 @@
+N_Samples,Quantum_Throughput_s_per_s,Classical_Throughput_s_per_s,Speedup_Factor,Faster_Model
+10,387.05,29753.87,76.873,Classical
+50,542.02,50000000.0,92247.486,Classical

@@ -1,0 +1,6 @@
+Batch_Size,Quantum_Time_s,Quantum_Std_s,Quantum_Per_Sample_ms,Classical_Time_s,Classical_Std_s,Classical_Per_Sample_ms,Speedup_Factor,Speedup_Per_Sample,Faster_Model
+1,0.003,0.000894,2.9999,0.0,0.0,0.0,0.0,0.0,Classical
+5,0.0118,0.003187,2.3599,0.0,0.0,0.0,0.0,0.0,Classical
+10,0.020921,0.002051,2.0921,0.0,0.0,0.0,0.0,0.0,Classical
+20,0.037576,0.00283,1.8788,0.000178,0.000357,0.0089,0.005,0.005,Classical
+50,0.093691,0.004378,1.8738,0.0,0.0,0.0,0.0,0.0,Classical

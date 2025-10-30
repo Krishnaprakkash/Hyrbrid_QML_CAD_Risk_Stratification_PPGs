@@ -1,0 +1,8 @@
+Metric,Count
+Total Samples,94
+CAD-Flagged Samples,58
+Percentage Flagged,61.70%
+High Risk (P > 0.7),4
+Medium Risk (0.5 < P ≤ 0.7),54
+True Positives,19
+False Positives,39

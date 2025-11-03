@@ -4,3 +4,4 @@ cad-qml-ppg/data/processed/physionet_ppg_signals.npz
 cad-qml-ppg/data/processed/preprocessed_ppg_signals.npz
 cad-qml-ppg/data/processed/nan_analysis.csv
 cad-qml-ppg/src/__pycache__/
+Report/

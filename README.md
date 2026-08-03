@@ -1,4 +1,4 @@
-A Hybrid Quantum Machine Learning Algorithm to predict and classify risk of Coronary Artery Disease (CAD) from a dataset of Photoplethysmography (PPG) Signals. This project serves as a proof of concept for the potential of Qunatum Computing and Hybrid Quantum Computing in real-time prediction scenarios, which can greatly benifit from the vastly faster computing speed of Quantum Computers.
+A Hybrid Quantum Machine Learning Algorithm to predict and classify risk of Coronary Artery Disease (CAD) from a dataset of Photoplethysmography (PPG) Signals. This project serves as a proof of concept for the potential of Quantum Computing and Hybrid Quantum Computing in real-time prediction scenarios, which can greatly benefit from the vastly faster computing speed of Quantum Computers.
 
 This model compares the performance of ADASYN-tuned Linear Regression Model and a 4-Qubit Circuit with two superposed gates, in the prediction and classification of CAD risk in a PPG signal based on a probability score, dervied from analyzing 16 Key features extracted from the base data.
 
